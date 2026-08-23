@@ -312,18 +312,103 @@ const About = () => {
         @media (max-width: 900px) {
           .clean-story-grid {
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 36px;
           }
           .about-story-clean {
-            margin-bottom: 70px;
+            margin-bottom: 60px;
           }
           .about-offerings-section {
-            padding-top: 70px;
-            padding-bottom: 60px;
+            padding-top: 60px;
+            padding-bottom: 50px;
           }
           .offerings-grid {
             grid-template-columns: 1fr;
-            gap: 24px;
+            gap: 20px;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .about-page-wrapper {
+            padding-top: 85px;
+            padding-bottom: 60px;
+          }
+          .about-clean-header {
+            margin-bottom: 24px;
+            padding: 20px 14px;
+            border-radius: 12px;
+          }
+          .about-clean-header h1 {
+            font-size: 1.75rem;
+            margin-bottom: 8px;
+          }
+          .about-clean-subtitle {
+            font-size: 0.88rem;
+          }
+
+          /* Picture Showcase Responsive */
+          .asset-main {
+            height: 220px;
+            border-radius: 10px;
+          }
+          .asset-sub-grid {
+            gap: 10px !important;
+            margin-top: 10px !important;
+          }
+          .asset-card {
+            border-radius: 8px;
+          }
+
+          /* OUR PHILOSOPHY Section Responsive */
+          .story-text-column h2 {
+            font-size: 1.65rem;
+            margin-bottom: 12px;
+          }
+          .story-paragraph {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+          }
+          .clean-commitments-list {
+            margin-bottom: 24px;
+          }
+          .c-item {
+            gap: 10px !important;
+            margin-bottom: 10px !important;
+          }
+          .c-item span {
+            font-size: 0.82rem;
+          }
+
+          /* Action Buttons Full Width on Mobile */
+          .story-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px !important;
+          }
+          .story-actions .btn-primary,
+          .story-actions .btn-outline {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            padding: 14px 20px;
+          }
+
+          /* Offering Cards */
+          .offering-card {
+            padding: 22px 18px;
+            border-radius: 12px;
+          }
+          .offering-img-box {
+            height: 170px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+          }
+          .offering-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+          }
+          .offering-card p {
+            font-size: 0.84rem;
           }
         }
       `}} />
