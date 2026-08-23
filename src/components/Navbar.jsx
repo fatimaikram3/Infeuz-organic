@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Search, Heart, Menu, X, Sun, Moon, Palette, Sprout } from 'lucide-react';
+import { ShoppingCart, Search, Heart, Menu, X, Sun, Moon, Palette, Sprout, Sparkles, ChevronRight } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 
 const Navbar = () => {
@@ -21,6 +21,18 @@ const Navbar = () => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
+
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   const toggleTheme = () => {
     if (theme === 'light') setTheme('dark');
@@ -132,45 +144,89 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay Drawer */}
       {isMobileMenuOpen && (
-        <div
-          className="fixed inset-0 z-[60] flex flex-col items-center justify-center space-y-8 md:hidden"
-          style={{ backgroundColor: 'var(--off-white)', color: 'var(--dark-text)' }}
-        >
-          <button className="absolute top-6 right-6" onClick={() => setIsMobileMenuOpen(false)}>
-            <X size={32} />
-          </button>
-          <Link to="/" className="mb-8 flex flex-col items-center gap-4" onClick={() => setIsMobileMenuOpen(false)}>
-            <img src="/assets/logo.png" alt="Infeuz Organic" className="nav-logo mobile" />
-            <span className="text-3xl font-bold luxury-font tracking-tight">
-              INFEUZ <span className="font-light italic">ORGANIC</span>
-            </span>
-          </Link>
-          <Link to="/shop" className="text-xl uppercase tracking-widest" onClick={() => setIsMobileMenuOpen(false)}>Shop</Link>
-          <Link to="/about" className="text-xl uppercase tracking-widest" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
-          <Link to="/assessment" className="text-xl uppercase tracking-widest" style={{ color: 'var(--accent-gold)' }} onClick={() => setIsMobileMenuOpen(false)}>Skin Quiz</Link>
-          <Link to="/contact" className="text-xl uppercase tracking-widest" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-          <div className="flex items-center space-x-8 pt-8">
-            <button onClick={toggleTheme} className="p-2 rounded-full border border-gray-200" style={{ color: 'var(--dark-text)' }}>
-              {theme === 'light' ? <Moon size={24} /> :
-                theme === 'dark' ? <Palette size={24} /> :
-                  theme === 'sunset' ? <Sprout size={24} /> :
-                    <Sun size={24} />}
-            </button>
-            <button onClick={() => { setIsWishlistOpen(true); setIsMobileMenuOpen(false); }}>
-              <Heart size={24} />
-            </button>
-            <button onClick={() => { setIsCartOpen(true); setIsMobileMenuOpen(false); }}>
-              <ShoppingCart size={24} />
-            </button>
+        <div className="mobile-menu-overlay md:hidden" onClick={() => setIsMobileMenuOpen(false)}>
+          <div className="mobile-menu-drawer" onClick={(e) => e.stopPropagation()}>
+            
+            {/* Header */}
+            <div className="mobile-menu-header">
+              <Link to="/" className="mobile-brand" onClick={() => setIsMobileMenuOpen(false)}>
+                <img src="/assets/logo.png" alt="Infeuz Organic" className="mobile-logo-img" />
+                <span className="luxury-font mobile-brand-name">INFEUZ ORGANIC</span>
+              </Link>
+              <button className="mobile-close-btn" onClick={() => setIsMobileMenuOpen(false)} aria-label="Close menu">
+                <X size={22} />
+              </button>
+            </div>
+
+            {/* Navigation Options */}
+            <nav className="mobile-menu-nav">
+              <Link to="/" className="mobile-nav-item" onClick={() => setIsMobileMenuOpen(false)}>
+                <span>Home</span>
+                <ChevronRight size={16} className="nav-arrow" />
+              </Link>
+
+              <Link to="/shop" className="mobile-nav-item" onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="flex items-center gap-2">
+                  <span>Shop Collection</span>
+                </div>
+                <span className="badge-mini">50+ Items</span>
+              </Link>
+
+              <Link to="/assessment" className="mobile-nav-item highlight-item" onClick={() => setIsMobileMenuOpen(false)}>
+                <div className="flex items-center gap-2">
+                  <Sparkles size={16} className="text-gold" />
+                  <span>Skin Routine Quiz</span>
+                </div>
+                <span className="quiz-pill-badge">FREE</span>
+              </Link>
+
+              <Link to="/about" className="mobile-nav-item" onClick={() => setIsMobileMenuOpen(false)}>
+                <span>About Our Story</span>
+                <ChevronRight size={16} className="nav-arrow" />
+              </Link>
+
+              <Link to="/blog" className="mobile-nav-item" onClick={() => setIsMobileMenuOpen(false)}>
+                <span>Skincare Journal</span>
+                <ChevronRight size={16} className="nav-arrow" />
+              </Link>
+
+              <Link to="/contact" className="mobile-nav-item" onClick={() => setIsMobileMenuOpen(false)}>
+                <span>Contact Us</span>
+                <ChevronRight size={16} className="nav-arrow" />
+              </Link>
+            </nav>
+
+            {/* Quick Actions Footer */}
+            <div className="mobile-menu-footer">
+              <div className="mobile-action-buttons">
+                <button onClick={toggleTheme} className="mobile-footer-btn">
+                  {theme === 'light' ? <Moon size={18} /> :
+                   theme === 'dark' ? <Palette size={18} /> :
+                   theme === 'sunset' ? <Sprout size={18} /> :
+                   <Sun size={18} />}
+                  <span>{theme.toUpperCase()}</span>
+                </button>
+
+                <button onClick={() => { setIsWishlistOpen(true); setIsMobileMenuOpen(false); }} className="mobile-footer-btn">
+                  <Heart size={18} />
+                  <span>Wishlist</span>
+                </button>
+
+                <button onClick={() => { setIsCartOpen(true); setIsMobileMenuOpen(false); }} className="mobile-footer-btn">
+                  <ShoppingCart size={18} />
+                  <span>Bag ({cartCount})</span>
+                </button>
+              </div>
+
+              <p className="mobile-menu-tagline">100% Organic & Dermatologist Approved</p>
+            </div>
+
           </div>
         </div>
       )}
 
-      {/* Tailwind classes used above need to be handled. For now, I'll use inline styles or specific index.css classes if I don't set up Tailwind. 
-          Actually, I'll use standard CSS classes since I didn't install Tailwind. I'll modify Navbar to use plain CSS classes.
-      */}
       <style dangerouslySetInnerHTML={{
         __html: `
         .nav-content {
@@ -206,18 +262,18 @@ const Navbar = () => {
           }
         }
         .nav-logo {
-          height: 60px;
-          width: 60px;
+          height: 50px;
+          width: 50px;
           object-fit: cover;
           border-radius: 50%;
           transition: transform 0.3s ease;
           border: 2px solid var(--soft-pink);
         }
-        .nav-logo.mobile {
-          height: 100px;
-        }
-        .nav-logo:hover {
-          transform: scale(1.05);
+        @media (min-width: 768px) {
+          .nav-logo {
+            height: 60px;
+            width: 60px;
+          }
         }
         .fixed { position: fixed; }
         .top-0 { top: 0; }
@@ -230,21 +286,15 @@ const Navbar = () => {
         .justify-center { justify-content: center; }
         .space-x-8 > * + * { margin-left: 2rem; }
         .space-x-6 > * + * { margin-left: 1.5rem; }
-        .space-y-8 > * + * { margin-top: 2rem; }
         .hidden { display: none; }
         @media (min-width: 768px) { .md\\:flex { display: flex; } .md\\:hidden { display: none; } }
-        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
         .text-sm { font-size: 0.875rem; }
-        .text-xl { font-size: 1.25rem; }
+        .text-lg { font-size: 1.125rem; }
         .uppercase { text-transform: uppercase; }
         .tracking-widest { letter-spacing: 0.1em; }
-        .tracking-tighter { letter-spacing: -0.05em; }
         .font-bold { font-weight: 700; }
-        .font-light { font-weight: 300; }
-        .italic { font-style: italic; }
         .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-        .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
         .absolute { position: absolute; }
         .relative { position: relative; }
         .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
@@ -253,6 +303,169 @@ const Navbar = () => {
           color: var(--button-text);
           font-size: 0.72rem;
           letter-spacing: 1.5px;
+        }
+
+        /* Mobile Drawer Custom Styles */
+        .mobile-menu-overlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.55);
+          backdrop-filter: blur(8px);
+          z-index: 10000;
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        .mobile-menu-drawer {
+          width: 86%;
+          max-width: 380px;
+          height: 100%;
+          background: var(--off-white);
+          color: var(--dark-text);
+          display: flex;
+          flex-direction: column;
+          box-shadow: -10px 0 40px rgba(0,0,0,0.2);
+          animation: slideDrawer 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+          overflow-y: auto;
+        }
+
+        @keyframes slideDrawer {
+          from { transform: translateX(100%); }
+          to { transform: translateX(0); }
+        }
+
+        .mobile-menu-header {
+          padding: 18px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid var(--glass-border);
+        }
+
+        .mobile-brand {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .mobile-logo-img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 1px solid var(--soft-pink);
+        }
+
+        .mobile-brand-name {
+          font-size: 1.05rem;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+        }
+
+        .mobile-close-btn {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background: var(--beige);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--dark-text);
+          cursor: pointer;
+        }
+
+        .mobile-menu-nav {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          flex-grow: 1;
+        }
+
+        .mobile-nav-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 16px;
+          background: var(--surface);
+          border: 1px solid var(--glass-border);
+          border-radius: 12px;
+          font-size: 0.85rem;
+          font-weight: 600;
+          letter-spacing: 0.8px;
+          text-transform: uppercase;
+          color: var(--dark-text);
+          transition: all 0.2s ease;
+        }
+
+        .mobile-nav-item:hover, .mobile-nav-item:active {
+          background: var(--beige);
+          border-color: var(--dark-text);
+          transform: translateX(4px);
+        }
+
+        .mobile-nav-item.highlight-item {
+          background: linear-gradient(135deg, var(--beige) 0%, var(--surface) 100%);
+          border-color: var(--accent-gold);
+          color: var(--dark-text);
+        }
+
+        .nav-arrow {
+          color: var(--muted-text);
+        }
+
+        .badge-mini {
+          font-size: 0.65rem;
+          background: var(--beige);
+          color: var(--muted-text);
+          padding: 3px 8px;
+          border-radius: 20px;
+          font-weight: 600;
+        }
+
+        .quiz-pill-badge {
+          font-size: 0.65rem;
+          background: var(--dark-text);
+          color: var(--button-text);
+          padding: 3px 8px;
+          border-radius: 20px;
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+
+        .mobile-menu-footer {
+          padding: 18px 20px 24px;
+          border-top: 1px solid var(--glass-border);
+          background: var(--surface);
+        }
+
+        .mobile-action-buttons {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+          margin-bottom: 14px;
+        }
+
+        .mobile-footer-btn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+          padding: 10px 4px;
+          background: var(--off-white);
+          border: 1px solid var(--glass-border);
+          border-radius: 10px;
+          font-size: 0.68rem;
+          font-weight: 600;
+          color: var(--dark-text);
+        }
+
+        .mobile-menu-tagline {
+          text-align: center;
+          font-size: 0.7rem;
+          color: var(--muted-text);
+          letter-spacing: 0.5px;
         }
       `}} />
     </nav>
