@@ -148,7 +148,7 @@ const About = () => {
         __html: `
         .about-page-wrapper {
           padding-top: 100px;
-          padding-bottom: 90px;
+          padding-bottom: 30px;
           color: var(--dark-text);
         }
 

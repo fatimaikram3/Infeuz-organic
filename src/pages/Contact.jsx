@@ -486,7 +486,7 @@ const Contact = () => {
         __html: `
         .contact-page-wrapper {
           padding-top: 100px;
-          padding-bottom: 70px;
+          padding-bottom: 30px;
           color: var(--dark-text);
         }
 

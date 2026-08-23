@@ -281,7 +281,7 @@ const Home = () => {
         __html: `
         .home-page-wrapper {
           padding-top: 100px;
-          padding-bottom: 60px;
+          padding-bottom: 30px;
           color: var(--dark-text);
         }
 
