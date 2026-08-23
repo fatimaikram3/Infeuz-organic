@@ -78,11 +78,6 @@ const Home = () => {
                 alt="Infeuz Organic Skincare" 
                 className="hero-img"
               />
-              <div className="hero-card-floating-badge">
-                <Sparkles size={16} className="text-gold mb-1" />
-                <strong className="block text-xs uppercase tracking-wider">Handcrafted Formulation</strong>
-                <span className="text-xs muted-text">Pure Botanical Oils</span>
-              </div>
             </motion.div>
           </div>
 
