@@ -206,14 +206,17 @@ const Shop = () => {
         /* Controls Row */
         .clean-controls-row {
           border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-          padding-bottom: 16px;
+          padding-bottom: 20px;
+          margin-bottom: 30px;
         }
 
         .clean-tabs-list {
+          display: flex;
+          align-items: center;
+          gap: 28px;
           overflow-x: auto;
-          scrollbar-width: none;
           white-space: nowrap;
-          padding-bottom: 4px;
+          scrollbar-width: none;
         }
 
         .clean-tabs-list::-webkit-scrollbar {
@@ -231,7 +234,7 @@ const Shop = () => {
           padding: 6px 0;
           position: relative;
           cursor: pointer;
-          transition: color 0.2s ease;
+          transition: all 0.2s ease;
         }
 
         .clean-cat-btn:hover {
@@ -240,17 +243,74 @@ const Shop = () => {
 
         .clean-cat-btn.active {
           color: var(--dark-text);
-          font-weight: 600;
+          font-weight: 700;
         }
 
         .clean-cat-btn.active::after {
           content: '';
           position: absolute;
-          bottom: -17px;
+          bottom: -21px;
           left: 0;
           width: 100%;
           height: 2px;
           background-color: var(--dark-text);
+        }
+
+        /* Responsive Mobile Layout for Category Filters */
+        @media (max-width: 768px) {
+          .clean-controls-row {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 16px;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+          }
+
+          .clean-tabs-list {
+            display: flex;
+            flex-wrap: wrap;
+            white-space: normal;
+            overflow: visible;
+            gap: 8px 6px;
+            width: 100%;
+          }
+
+          .clean-cat-btn {
+            padding: 8px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            background: var(--surface);
+            font-size: 0.76rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: var(--dark-text);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            text-transform: uppercase;
+          }
+
+          .clean-cat-btn:hover, .clean-cat-btn:active {
+            border-color: var(--dark-text);
+          }
+
+          .clean-cat-btn.active {
+            background: var(--dark-text);
+            color: var(--button-text);
+            border-color: var(--dark-text);
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+          }
+
+          .clean-cat-btn.active::after {
+            display: none;
+          }
+
+          .clean-filter-btn {
+            width: 100%;
+            justify-content: center;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+          }
         }
 
         .clean-filter-btn {
