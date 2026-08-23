@@ -203,7 +203,7 @@ const Contact = () => {
                 Connect with 50,000+ radiance seekers for daily skincare rituals, ingredient highlights, and VIP drops.
               </p>
               <div className="social-pills-row">
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-pill">
+                <a href="https://www.instagram.com/infeuzorganic?igsi=ejJqOGFqNnlkYWRv" target="_blank" rel="noopener noreferrer" className="social-pill">
                   <Instagram size={18} /> <span>Instagram</span>
                 </a>
                 <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-pill">

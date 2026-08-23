@@ -13,7 +13,7 @@ const Footer = () => {
             </div>
             <p>Embrace your natural glow with our dermatologist-approved, cruelty-free formulas.</p>
             <div className="social-links">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" className="social-icon-btn">
+              <a href="https://www.instagram.com/infeuzorganic?igsi=ejJqOGFqNnlkYWRv" target="_blank" rel="noopener noreferrer" title="Instagram" className="social-icon-btn">
                 <Instagram size={20} />
               </a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" className="social-icon-btn">
