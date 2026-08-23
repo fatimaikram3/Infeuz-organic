@@ -217,7 +217,28 @@ const Checkout = () => {
           align-items: start;
         }
         @media (max-width: 900px) {
-          .checkout-grid { grid-template-columns: 1fr; }
+          .checkout-grid { 
+            grid-template-columns: 1fr; 
+            gap: 30px;
+          }
+          .checkout-form {
+            order: 2;
+          }
+          .order-summary {
+            order: 1;
+          }
+        }
+        @media (max-width: 640px) {
+          .checkout-row, .flex.gap-4 {
+            flex-direction: column !important;
+            gap: 12px !important;
+          }
+          .w-1\/2 {
+            width: 100% !important;
+          }
+          .order-summary {
+            padding: 20px !important;
+          }
         }
         .checkout-input {
           width: 100%;
@@ -243,13 +264,13 @@ const Checkout = () => {
         }
         .summary-item {
           display: flex;
-          gap: 20px;
+          gap: 15px;
           margin-bottom: 20px;
           align-items: center;
         }
         .summary-img {
-          width: 80px;
-          height: 100px;
+          width: 70px;
+          height: 85px;
           flex-shrink: 0;
           background: var(--beige);
           border-radius: 4px;
@@ -263,7 +284,7 @@ const Checkout = () => {
         .flex { display: flex; }
         .flex-col { flex-direction: column; }
         .gap-4 { gap: 1rem; }
-        .w-1/2 { width: 50%; }
+        .w-1\/2 { width: 50%; }
         .w-full { width: 100%; }
         .color-muted { color: var(--muted-text); }
         .bg-surface { background: var(--surface); }

@@ -48,18 +48,42 @@ const Navbar = () => {
 
         {/* Logo Center */}
         <div className="nav-col-center">
-          <Link to="/" className="flex items-center justify-center gap-6">
+          <Link to="/" className="flex items-center justify-center gap-3 md:gap-6">
             <img src="/assets/logo.png" alt="Infeuz Organic" className="nav-logo" />
-            <span className="text-2xl font-bold luxury-font tracking-tight">
+            <span className="text-lg md:text-2xl font-bold luxury-font tracking-tight">
               INFEUZ ORGANIC
             </span>
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle (Only visible on mobile) */}
-        <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Header Actions (Visible on Mobile) */}
+        <div className="flex md:hidden items-center gap-3">
+          <button className="p-1 text-dark-text" onClick={() => setIsSearchOpen(true)} aria-label="Search">
+            <Search size={20} />
+          </button>
+          <button className="relative p-1 text-dark-text" onClick={() => setIsCartOpen(true)} aria-label="Cart">
+            <ShoppingCart size={20} />
+            {cartCount > 0 && (
+              <span
+                className="absolute flex items-center justify-center text-white font-bold rounded-full"
+                style={{
+                  backgroundColor: 'var(--accent-gold)',
+                  fontSize: '9px',
+                  width: '15px',
+                  height: '15px',
+                  top: '-4px',
+                  right: '-6px',
+                  lineHeight: '1'
+                }}
+              >
+                {cartCount}
+              </span>
+            )}
+          </button>
+          <button className="p-1 ml-1 text-dark-text" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
 
         {/* Desktop Icons Right */}
         <div className="nav-col-right hidden md:flex items-center space-x-6">

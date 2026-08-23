@@ -150,7 +150,16 @@ const ProductDetail = () => {
           align-items: center;
         }
         @media (max-width: 900px) {
-           .pd-grid { grid-template-columns: 1fr; }
+           .pd-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+        @media (max-width: 640px) {
+          .pd-info .text-4xl { font-size: 1.8rem; margin-bottom: 1rem; }
+          .pd-price { font-size: 1.4rem; margin-bottom: 1.2rem; }
+          .pd-actions { gap: 12px; }
+          .btn-add-bag { min-width: 100%; order: 2; }
+          .quantity-selector { order: 1; }
+          .pd-wish-btn { order: 3; }
+          .pd-features { grid-template-columns: 1fr; gap: 12px; padding: 16px; }
         }
 
         .main-img {
