@@ -16,7 +16,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/infeuzorganic?igsi=ejJqOGFqNnlkYWRv" target="_blank" rel="noopener noreferrer" title="Instagram" className="social-icon-btn">
                 <Instagram size={20} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" className="social-icon-btn">
+              <a href="https://www.facebook.com/share/198yVNbvG7/" target="_blank" rel="noopener noreferrer" title="Facebook" className="social-icon-btn">
                 <Facebook size={20} />
               </a>
               <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" title="WhatsApp" className="social-icon-btn">

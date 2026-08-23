@@ -206,7 +206,7 @@ const Contact = () => {
                 <a href="https://www.instagram.com/infeuzorganic?igsi=ejJqOGFqNnlkYWRv" target="_blank" rel="noopener noreferrer" className="social-pill">
                   <Instagram size={18} /> <span>Instagram</span>
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-pill">
+                <a href="https://www.facebook.com/share/198yVNbvG7/" target="_blank" rel="noopener noreferrer" className="social-pill">
                   <Facebook size={18} /> <span>Facebook</span>
                 </a>
                 <a href="https://wa.me/" target="_blank" rel="noreferrer" className="social-pill">
