@@ -187,11 +187,6 @@ const Navbar = () => {
                 <ChevronRight size={16} className="nav-arrow" />
               </Link>
 
-              <Link to="/blog" className="mobile-nav-item" onClick={() => setIsMobileMenuOpen(false)}>
-                <span>Skincare Journal</span>
-                <ChevronRight size={16} className="nav-arrow" />
-              </Link>
-
               <Link to="/contact" className="mobile-nav-item" onClick={() => setIsMobileMenuOpen(false)}>
                 <span>Contact Us</span>
                 <ChevronRight size={16} className="nav-arrow" />
