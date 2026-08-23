@@ -8,58 +8,58 @@ export const ShopProvider = ({ children }) => {
     // Centralized Products List
     const products = [
         // Soaps
-        { id: 1, name: 'Acne and Whitening Soap', category: 'Soaps', price: 750, img: '/src/assets/acne_whitening_soap.png', tag: 'New' },
-        { id: 2, name: 'Daisy Lime Soap', category: 'Soaps', price: 650, img: '/src/assets/daisy_lime_soap.png', tag: 'Fresh' },
-        { id: 101, name: 'Mocha Mist Soap', category: 'Soaps', price: 800, img: '/src/assets/mocha_mist_soap.png', tag: 'Rich' },
-        { id: 102, name: 'Lavender Soap', category: 'Soaps', price: 700, img: '/src/assets/lavender_soap_bar.png', tag: 'Soothing' },
-        { id: 103, name: 'Whitening Booster Soap', category: 'Soaps', price: 850, img: '/src/assets/whitening_booster_soap.png', tag: 'Best' },
-        { id: 104, name: 'Charcoal Soap', category: 'Soaps', price: 750, img: '/src/assets/charcoal_soap.jpg', tag: 'Detox' },
-        { id: 106, name: 'Moroccon Daisy Soap', category: 'Soaps', price: 900, img: '/src/assets/moroccon_daisy_soap.jpg', tag: 'Luxury' },
+        { id: 1, name: 'Acne and Whitening Soap', category: 'Soaps', price: 750, img: '/assets/acne_whitening_soap.png', tag: 'New' },
+        { id: 2, name: 'Daisy Lime Soap', category: 'Soaps', price: 650, img: '/assets/daisy_lime_soap.png', tag: 'Fresh' },
+        { id: 101, name: 'Mocha Mist Soap', category: 'Soaps', price: 800, img: '/assets/mocha_mist_soap.png', tag: 'Rich' },
+        { id: 102, name: 'Lavender Soap', category: 'Soaps', price: 700, img: '/assets/lavender_soap_bar.png', tag: 'Soothing' },
+        { id: 103, name: 'Whitening Booster Soap', category: 'Soaps', price: 850, img: '/assets/whitening_booster_soap.png', tag: 'Best' },
+        { id: 104, name: 'Charcoal Soap', category: 'Soaps', price: 750, img: '/assets/charcoal_soap.jpg', tag: 'Detox' },
+        { id: 106, name: 'Moroccon Daisy Soap', category: 'Soaps', price: 900, img: '/assets/moroccon_daisy_soap.jpg', tag: 'Luxury' },
 
         // Soap Bases
-        { id: 3, name: 'Transparent Soap Base', category: 'Soap Bases', price: 1200, img: '/src/assets/transparent_soap_base.jpeg', tag: 'Pure' },
-        { id: 4, name: 'Premium Goat Milk Base', category: 'Soap Bases', price: 1500, img: '/src/assets/goatmilk_soap_base.jpeg', tag: 'Creamy' },
-        { id: 301, name: 'Milky Soap Base', category: 'Soap Bases', price: 1400, img: '/src/assets/milky_soap_base.jpeg', tag: 'Rich' },
-        { id: 302, name: 'Charcoal Soap Base', category: 'Soap Bases', price: 1600, img: '/src/assets/charcoal_soap_base_v3.jpeg', tag: 'Detox' },
+        { id: 3, name: 'Transparent Soap Base', category: 'Soap Bases', price: 1200, img: '/assets/transparent_soap_base.jpeg', tag: 'Pure' },
+        { id: 4, name: 'Premium Goat Milk Base', category: 'Soap Bases', price: 1500, img: '/assets/goatmilk_soap_base.jpeg', tag: 'Creamy' },
+        { id: 301, name: 'Milky Soap Base', category: 'Soap Bases', price: 1400, img: '/assets/milky_soap_base.jpeg', tag: 'Rich' },
+        { id: 302, name: 'Charcoal Soap Base', category: 'Soap Bases', price: 1600, img: '/assets/charcoal_soap_base_v3.jpeg', tag: 'Detox' },
 
         // Moisturizers
-        { id: 5, name: 'Premium Moisturizer (150ml)', category: 'Moisturizer', price: 1450, img: '/src/assets/moisturizer_150ml.png', tag: 'Everyday' },
-        { id: 105, name: 'Premium Moisturizer (1KG)', category: 'Moisturizer', price: 8500, img: '/src/assets/moisturizer_1kg.png', tag: 'Value Pack' },
+        { id: 5, name: 'Premium Moisturizer (150ml)', category: 'Moisturizer', price: 1450, img: '/assets/moisturizer_150ml.png', tag: 'Everyday' },
+        { id: 105, name: 'Premium Moisturizer (1KG)', category: 'Moisturizer', price: 8500, img: '/assets/moisturizer_1kg.png', tag: 'Value Pack' },
 
         // Serums
-        { id: 7, name: 'Glowing Spotless Face Serum', category: 'Serum', price: 2500, img: '/src/assets/serum_glowing_v2.png', tag: 'New' },
-        { id: 8, name: 'Even Tone Serum', category: 'Serum', price: 2800, img: '/src/assets/serum_even_tone_v2.png', tag: 'Bestseller' },
-        { id: 107, name: 'Peel & Reveal Serum', category: 'Serum', price: 2200, img: '/src/assets/serum_peel_v2.png', tag: 'Artisan' },
+        { id: 7, name: 'Glowing Spotless Face Serum', category: 'Serum', price: 2500, img: '/assets/serum_glowing_v2.png', tag: 'New' },
+        { id: 8, name: 'Even Tone Serum', category: 'Serum', price: 2800, img: '/assets/serum_even_tone_v2.png', tag: 'Bestseller' },
+        { id: 107, name: 'Peel & Reveal Serum', category: 'Serum', price: 2200, img: '/assets/serum_peel_v2.png', tag: 'Artisan' },
 
         // Scrubs
-        { id: 9, name: 'Aker Fassi Scrub', category: 'Scrubs', price: 1250, img: '/src/assets/aker_fassi_scrub.jpeg', tag: 'Traditional' },
-        { id: 303, name: 'Nila Moroccan Scrub', category: 'Scrubs', price: 1850, img: '/src/assets/nila_moroccan_scrub_v2.jpeg', tag: 'Luxury' },
+        { id: 9, name: 'Aker Fassi Scrub', category: 'Scrubs', price: 1250, img: '/assets/aker_fassi_scrub.jpeg', tag: 'Traditional' },
+        { id: 303, name: 'Nila Moroccan Scrub', category: 'Scrubs', price: 1850, img: '/assets/nila_moroccan_scrub_v2.jpeg', tag: 'Luxury' },
 
         // Oils
-        { id: 11, name: 'Peppermint Essential Oil', category: 'Oils', price: 850, img: '/src/assets/oil_peppermint.jpeg', tag: 'Pure' },
-        { id: 12, name: 'Tea Tree Essential Oil', category: 'Oils', price: 950, img: '/src/assets/oil_teatree.jpeg', tag: 'Cleansing' },
-        { id: 111, name: 'Lavender Essential Oil', category: 'Oils', price: 850, img: '/src/assets/oil_lavender.jpeg', tag: 'Soothing' },
-        { id: 112, name: 'Eucalyptus Essential Oil', category: 'Oils', price: 900, img: '/src/assets/oil_eucalyptus.jpeg', tag: 'Refreshing' },
-        { id: 115, name: 'Rose Fragrance Oil', category: 'Oils', price: 1200, img: '/src/assets/oil_rose.png', tag: 'Floral' },
-        { id: 116, name: 'Strawberry Fragrance Oil', category: 'Oils', price: 1100, img: '/src/assets/oil_strawberry.png', tag: 'Sweet' },
-        { id: 117, name: 'Jasmine Fragrance Oil', category: 'Oils', price: 1250, img: '/src/assets/oil_jasmine.png', tag: 'Exotic' },
-        { id: 118, name: 'Vitamin E Oil', category: 'Oils', price: 1500, img: '/src/assets/oil_vitamin_e.png', tag: 'Nourishing' },
+        { id: 11, name: 'Peppermint Essential Oil', category: 'Oils', price: 850, img: '/assets/oil_peppermint.jpeg', tag: 'Pure' },
+        { id: 12, name: 'Tea Tree Essential Oil', category: 'Oils', price: 950, img: '/assets/oil_teatree.jpeg', tag: 'Cleansing' },
+        { id: 111, name: 'Lavender Essential Oil', category: 'Oils', price: 850, img: '/assets/oil_lavender.jpeg', tag: 'Soothing' },
+        { id: 112, name: 'Eucalyptus Essential Oil', category: 'Oils', price: 900, img: '/assets/oil_eucalyptus.jpeg', tag: 'Refreshing' },
+        { id: 115, name: 'Rose Fragrance Oil', category: 'Oils', price: 1200, img: '/assets/oil_rose.png', tag: 'Floral' },
+        { id: 116, name: 'Strawberry Fragrance Oil', category: 'Oils', price: 1100, img: '/assets/oil_strawberry.png', tag: 'Sweet' },
+        { id: 117, name: 'Jasmine Fragrance Oil', category: 'Oils', price: 1250, img: '/assets/oil_jasmine.png', tag: 'Exotic' },
+        { id: 118, name: 'Vitamin E Oil', category: 'Oils', price: 1500, img: '/assets/oil_vitamin_e.png', tag: 'Nourishing' },
 
         // Powders
-        { id: 201, name: 'Akarfassi Powder', category: 'Powders', price: 1200, img: '/src/assets/powder_akarfassi.png', tag: 'Traditional' },
-        { id: 202, name: 'Sidr Powder', category: 'Powders', price: 950, img: '/src/assets/powder_sidr.jpg', tag: 'Natural' },
-        { id: 203, name: 'Nila Moroccan Powder', category: 'Powders', price: 1850, img: '/src/assets/powder_nila.png', tag: 'Luxury' },
+        { id: 201, name: 'Akarfassi Powder', category: 'Powders', price: 1200, img: '/assets/powder_akarfassi.png', tag: 'Traditional' },
+        { id: 202, name: 'Sidr Powder', category: 'Powders', price: 950, img: '/assets/powder_sidr.jpg', tag: 'Natural' },
+        { id: 203, name: 'Nila Moroccan Powder', category: 'Powders', price: 1850, img: '/assets/powder_nila.png', tag: 'Luxury' },
 
         // Moulds
-        { id: 401, name: 'Rectangle Soap Mould', category: 'Moulds', price: 650, img: '/src/assets/rectangle_soap_mould.jfif', tag: 'Eco' },
-        { id: 402, name: 'Daisy Soap Mould', category: 'Moulds', price: 550, img: '/src/assets/daisy_soap_mould.jfif', tag: 'Floral' },
-        { id: 403, name: 'Honey Comb Soap Mould', category: 'Moulds', price: 600, img: '/src/assets/honeycomb_soap_mould.jpg', tag: 'Natural' },
-        { id: 404, name: 'Hexagonal Honey Comb Mould', category: 'Moulds', price: 600, img: '/src/assets/hexagonal_honeycomb_soap_mould.jfif', tag: 'Modern' },
-        { id: 405, name: 'Mermaid Tail Soap Mould', category: 'Moulds', price: 750, img: '/src/assets/mermaid_tail_soap_mould.jfif', tag: 'Fancy' },
-        { id: 406, name: 'Oval Soap Mould', category: 'Moulds', price: 500, img: '/src/assets/oval_soap_mould.jfif', tag: 'Classic' },
-        { id: 407, name: 'Message Bar Soap Mould', category: 'Moulds', price: 700, img: '/src/assets/message_bar_soap_mould.png', tag: 'Artistic' },
-        { id: 408, name: 'Heart Shape Soap Mould', category: 'Moulds', price: 550, img: '/src/assets/heart_shape_soap_mould.jfif', tag: 'Love' },
-        { id: 409, name: 'Strawberry Soap Mould', category: 'Moulds', price: 650, img: '/src/assets/strawberry_soap_mould.jpg', tag: 'Fruity' },
+        { id: 401, name: 'Rectangle Soap Mould', category: 'Moulds', price: 650, img: '/assets/rectangle_soap_mould.jfif', tag: 'Eco' },
+        { id: 402, name: 'Daisy Soap Mould', category: 'Moulds', price: 550, img: '/assets/daisy_soap_mould.jfif', tag: 'Floral' },
+        { id: 403, name: 'Honey Comb Soap Mould', category: 'Moulds', price: 600, img: '/assets/honeycomb_soap_mould.jpg', tag: 'Natural' },
+        { id: 404, name: 'Hexagonal Honey Comb Mould', category: 'Moulds', price: 600, img: '/assets/hexagonal_honeycomb_soap_mould.jfif', tag: 'Modern' },
+        { id: 405, name: 'Mermaid Tail Soap Mould', category: 'Moulds', price: 750, img: '/assets/mermaid_tail_soap_mould.jfif', tag: 'Fancy' },
+        { id: 406, name: 'Oval Soap Mould', category: 'Moulds', price: 500, img: '/assets/oval_soap_mould.jfif', tag: 'Classic' },
+        { id: 407, name: 'Message Bar Soap Mould', category: 'Moulds', price: 700, img: '/assets/message_bar_soap_mould.png', tag: 'Artistic' },
+        { id: 408, name: 'Heart Shape Soap Mould', category: 'Moulds', price: 550, img: '/assets/heart_shape_soap_mould.jfif', tag: 'Love' },
+        { id: 409, name: 'Strawberry Soap Mould', category: 'Moulds', price: 650, img: '/assets/strawberry_soap_mould.jpg', tag: 'Fruity' },
     ];
 
     const [cart, setCart] = useState(() => {

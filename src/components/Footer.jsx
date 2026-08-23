@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="flex items-center gap-6 mb-6">
-              <img src="/src/assets/logo.png" alt="Infeuz Organic" className="footer-logo" />
+              <img src="/assets/logo.png" alt="Infeuz Organic" className="footer-logo" />
               <h2 className="luxury-font text-2xl">INFEUZ ORGANIC</h2>
             </div>
             <p>Embrace your natural glow with our dermatologist-approved, cruelty-free formulas.</p>

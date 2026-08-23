@@ -49,7 +49,7 @@ const Navbar = () => {
         {/* Logo Center */}
         <div className="nav-col-center">
           <Link to="/" className="flex items-center justify-center gap-6">
-            <img src="/src/assets/logo.png" alt="Infeuz Organic" className="nav-logo" />
+            <img src="/assets/logo.png" alt="Infeuz Organic" className="nav-logo" />
             <span className="text-2xl font-bold luxury-font tracking-tight">
               INFEUZ ORGANIC
             </span>
@@ -118,7 +118,7 @@ const Navbar = () => {
             <X size={32} />
           </button>
           <Link to="/" className="mb-8 flex flex-col items-center gap-4" onClick={() => setIsMobileMenuOpen(false)}>
-            <img src="/src/assets/logo.png" alt="Infeuz Organic" className="nav-logo mobile" />
+            <img src="/assets/logo.png" alt="Infeuz Organic" className="nav-logo mobile" />
             <span className="text-3xl font-bold luxury-font tracking-tight">
               INFEUZ <span className="font-light italic">ORGANIC</span>
             </span>

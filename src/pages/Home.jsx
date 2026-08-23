@@ -8,14 +8,14 @@ const Home = () => {
   const { products, addToCart, toggleWishlist, setActiveQuickView, wishlist } = useShop();
 
   const categories = [
-    { name: 'Soaps', img: '/src/assets/daisy_lime_soap.png', color: 'var(--sage-green)' },
-    { name: 'Soap Bases', img: '/src/assets/goatmilk_soap_base.jpeg', color: 'var(--soft-pink)' },
-    { name: 'Moisturizer', img: '/src/assets/moisturizer_150ml.png', color: 'var(--beige)' },
-    { name: 'Serum', img: '/src/assets/serum_peel_v2.png', color: 'var(--sage-green)' },
-    { name: 'Scrubs', img: '/src/assets/aker_fassi_scrub.jpeg', color: 'var(--soft-pink)' },
-    { name: 'Oils', img: '/src/assets/oil_peppermint.jpeg', color: 'var(--beige)' },
-    { name: 'Powders', img: '/src/assets/powder_akarfassi.png', color: 'var(--sage-green)' },
-    { name: 'Moulds', img: '/src/assets/rectangle_soap_mould.jfif', color: 'var(--soft-pink)' },
+    { name: 'Soaps', img: '/assets/daisy_lime_soap.png', color: 'var(--sage-green)' },
+    { name: 'Soap Bases', img: '/assets/goatmilk_soap_base.jpeg', color: 'var(--soft-pink)' },
+    { name: 'Moisturizer', img: '/assets/moisturizer_150ml.png', color: 'var(--beige)' },
+    { name: 'Serum', img: '/assets/serum_peel_v2.png', color: 'var(--sage-green)' },
+    { name: 'Scrubs', img: '/assets/aker_fassi_scrub.jpeg', color: 'var(--soft-pink)' },
+    { name: 'Oils', img: '/assets/oil_peppermint.jpeg', color: 'var(--beige)' },
+    { name: 'Powders', img: '/assets/powder_akarfassi.png', color: 'var(--sage-green)' },
+    { name: 'Moulds', img: '/assets/rectangle_soap_mould.jfif', color: 'var(--soft-pink)' },
   ];
 
   return (
@@ -74,7 +74,7 @@ const Home = () => {
               transition={{ duration: 0.3 }}
             >
               <img 
-                src="/src/assets/hero-product.jpg" 
+                src="/assets/hero-product.jpg" 
                 alt="Infeuz Organic Skincare" 
                 className="hero-img"
               />

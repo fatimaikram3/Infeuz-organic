@@ -32,7 +32,7 @@ const Preloader = () => {
                         }}
                     >
                         <img
-                            src="/src/assets/logo.png"
+                            src="/assets/logo.png"
                             alt="Infeuz Organic Logo"
                             className="preloader-logo"
                             style={{ borderRadius: '50%', objectFit: 'cover' }}

@@ -24,7 +24,7 @@ const About = () => {
           <div className="story-assets-grid">
             <div className="asset-card asset-main">
               <img 
-                src="/src/assets/hero-product.jpg" 
+                src="/assets/hero-product.jpg" 
                 alt="Infeuz Organic Products" 
                 className="rounded-lg shadow-sm"
               />
@@ -32,14 +32,14 @@ const About = () => {
             <div className="asset-sub-grid grid grid-cols-2 gap-5 mt-5">
               <div className="asset-card">
                 <img 
-                  src="/src/assets/daisy_lime_soap.png" 
+                  src="/assets/daisy_lime_soap.png" 
                   alt="Daisy Lime Soap" 
                   className="rounded-lg"
                 />
               </div>
               <div className="asset-card">
                 <img 
-                  src="/src/assets/goatmilk_soap_base.jpeg" 
+                  src="/assets/goatmilk_soap_base.jpeg" 
                   alt="Goat Milk Base" 
                   className="rounded-lg"
                 />
@@ -110,7 +110,7 @@ const About = () => {
             
             <div className="offering-card bg-surface border p-8 rounded-xl text-center">
               <div className="offering-img-box mb-6">
-                <img src="/src/assets/acne_whitening_soap.png" alt="Soaps" />
+                <img src="/assets/acne_whitening_soap.png" alt="Soaps" />
               </div>
               <h3 className="luxury-font text-2xl mb-3">Organic Soaps</h3>
               <p className="text-sm muted-text leading-relaxed">
@@ -120,7 +120,7 @@ const About = () => {
 
             <div className="offering-card bg-surface border p-8 rounded-xl text-center">
               <div className="offering-img-box mb-6">
-                <img src="/src/assets/transparent_soap_base.jpeg" alt="Soap Bases" />
+                <img src="/assets/transparent_soap_base.jpeg" alt="Soap Bases" />
               </div>
               <h3 className="luxury-font text-2xl mb-3">Premium Soap Bases</h3>
               <p className="text-sm muted-text leading-relaxed">
@@ -130,7 +130,7 @@ const About = () => {
 
             <div className="offering-card bg-surface border p-8 rounded-xl text-center">
               <div className="offering-img-box mb-6">
-                <img src="/src/assets/serum_glowing_v2.png" alt="Serums & Oils" />
+                <img src="/assets/serum_glowing_v2.png" alt="Serums & Oils" />
               </div>
               <h3 className="luxury-font text-2xl mb-3">Serums & Oils</h3>
               <p className="text-sm muted-text leading-relaxed">

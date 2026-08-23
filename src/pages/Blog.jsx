@@ -74,7 +74,7 @@ const Blog = () => {
                         </div>
                     </div>
                     <div className="md:w-1/3 hidden md:block">
-                        <img src="/src/assets/hero-product.jpg" alt="Infeuz Organic Skin Care" className="w-full h-full object-cover" style={{ height: '400px' }} />
+                        <img src="/assets/hero-product.jpg" alt="Infeuz Organic Skin Care" className="w-full h-full object-cover" style={{ height: '400px' }} />
                     </div>
                 </div>
             </section>
