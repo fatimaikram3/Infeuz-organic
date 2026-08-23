@@ -283,11 +283,11 @@ const Assessment = () => {
     };
 
     return (
-        <div className="min-h-screen py-16 flex items-start justify-center" style={{ background: '#f8f9fa' }}>
-            <div className="container w-full max-w-lg mx-auto px-4">
+        <div className="min-h-screen pt-28 pb-16 flex items-start justify-center" style={{ background: '#f8f9fa' }}>
+            <div className="container w-full max-w-lg mx-auto px-3">
                 <div 
-                    className="w-full bg-white shadow-lg rounded-[2rem] p-8 md:p-10 flex flex-col" 
-                    style={{ minHeight: '500px', border: '1px solid rgba(0,0,0,0.05)' }}
+                    className="w-full bg-white shadow-lg rounded-2xl md:rounded-[2rem] p-5 md:p-10 flex flex-col" 
+                    style={{ minHeight: '450px', border: '1px solid rgba(0,0,0,0.05)' }}
                 >
                     {/* Header area matches the card style */}
                     <div className="w-full mb-8">

@@ -149,7 +149,7 @@ const Shop = () => {
       <style dangerouslySetInnerHTML={{
         __html: `
         .shop-page-wrapper {
-          padding-top: 15px;
+          padding-top: 100px;
           padding-bottom: 70px;
           color: var(--dark-text);
         }
@@ -158,6 +158,32 @@ const Shop = () => {
           max-width: 1200px;
           margin: 0 auto;
           padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+          .shop-page-wrapper {
+            padding-top: 90px;
+          }
+          .container {
+            padding: 0 14px;
+          }
+          .shop-clean-header {
+            padding: 20px 14px;
+            margin-bottom: 20px;
+          }
+          .shop-clean-header h1 {
+            font-size: 1.8rem;
+          }
+          .shop-clean-subtitle {
+            font-size: 0.88rem;
+          }
+          .clean-controls-row {
+            gap: 14px;
+            margin-bottom: 20px;
+          }
+          .clean-cat-btn {
+            font-size: 0.78rem;
+          }
         }
 
         /* Clean Header */

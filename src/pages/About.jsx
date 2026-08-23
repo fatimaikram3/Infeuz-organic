@@ -147,9 +147,25 @@ const About = () => {
       <style dangerouslySetInnerHTML={{
         __html: `
         .about-page-wrapper {
-          padding-top: 25px;
+          padding-top: 100px;
           padding-bottom: 90px;
           color: var(--dark-text);
+        }
+
+        @media (max-width: 768px) {
+          .about-page-wrapper {
+            padding-top: 90px;
+          }
+          .about-clean-header {
+            margin-bottom: 30px;
+            padding: 24px 16px;
+          }
+          .about-clean-header h1 {
+            font-size: 1.8rem;
+          }
+          .asset-main {
+            height: 240px;
+          }
         }
 
         .container {

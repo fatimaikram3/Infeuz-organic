@@ -50,7 +50,7 @@ const Checkout = () => {
     }
 
     return (
-        <div className="checkout-page container py-40">
+        <div className="checkout-page container pt-28 pb-16">
             <h1 className="luxury-font text-4xl mb-12 text-center">Secure Checkout</h1>
 
             <div className="checkout-grid">

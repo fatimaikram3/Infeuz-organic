@@ -32,7 +32,7 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="product-detail-page container py-40">
+    <div className="product-detail-page container pt-28 pb-16">
       <button
         onClick={() => navigate(-1)}
         className="back-btn flex items-center gap-2 mb-8 hover:text-dark-text transition-colors"

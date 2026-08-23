@@ -33,7 +33,7 @@ const Blog = () => {
     ];
 
     return (
-        <div className="blog-page container py-40">
+        <div className="blog-page container pt-28 pb-16">
             <div className="blog-header text-center mb-20">
                 <h1 className="luxury-font text-5xl mb-4">Skincare Journal</h1>
                 <p style={{ color: 'var(--muted-text)' }}>Expert tips, routines, and skincare education.</p>

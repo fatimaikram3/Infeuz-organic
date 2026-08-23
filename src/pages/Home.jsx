@@ -285,9 +285,48 @@ const Home = () => {
       <style dangerouslySetInnerHTML={{
         __html: `
         .home-page-wrapper {
-          padding-top: 25px;
+          padding-top: 100px;
           padding-bottom: 60px;
           color: var(--dark-text);
+        }
+
+        @media (max-width: 768px) {
+          .home-page-wrapper {
+            padding-top: 90px;
+          }
+          .home-hero-section {
+            margin-bottom: 35px;
+          }
+          .hero-grid {
+            padding: 24px 18px !important;
+            gap: 24px !important;
+          }
+          .hero-main-title {
+            font-size: 1.85rem !important;
+            margin-bottom: 12px !important;
+          }
+          .hero-subtitle-text {
+            font-size: 0.9rem !important;
+            margin-bottom: 20px !important;
+          }
+          .hero-btn-row {
+            flex-direction: column !important;
+            gap: 10px !important;
+            margin-bottom: 20px !important;
+          }
+          .hero-btn-row .btn-primary,
+          .hero-btn-row .btn-outline {
+            width: 100% !important;
+            text-align: center;
+          }
+          .hero-perks-row {
+            flex-wrap: wrap !important;
+            gap: 8px !important;
+            font-size: 0.7rem !important;
+          }
+          .hero-perks-row span:nth-child(even) {
+            display: none;
+          }
         }
 
         .container {
