@@ -27,9 +27,9 @@ export const ShopProvider = ({ children }) => {
         { id: 105, name: 'Premium Moisturizer (1KG)', category: 'Moisturizer', price: 8500, img: '/assets/moisturizer_1kg.png', tag: 'Value Pack' },
 
         // Serums
-        { id: 7, name: 'Glowing Spotless Face Serum', category: 'Serum', price: 2500, img: '/assets/serum_glowing_v2.png', tag: 'New' },
-        { id: 8, name: 'Even Tone Serum', category: 'Serum', price: 2800, img: '/assets/serum_even_tone_v2.png', tag: 'Bestseller' },
-        { id: 107, name: 'Peel & Reveal Serum', category: 'Serum', price: 2200, img: '/assets/serum_peel_v2.png', tag: 'Artisan' },
+        { id: 7, name: 'Glowing Spotless Face Serum', category: 'Serum', price: 1550, img: '/assets/serum_glowing_v2.png', tag: 'New' },
+        { id: 8, name: 'Even Tone Serum', category: 'Serum', price: 1550, img: '/assets/serum_even_tone_v2.png', tag: 'Bestseller' },
+        { id: 107, name: 'Peel & Reveal Serum', category: 'Serum', price: 1550, img: '/assets/serum_peel_v2.png', tag: 'Artisan' },
 
         // Scrubs
         { id: 9, name: 'Aker Fassi Scrub', category: 'Scrubs', price: 1250, img: '/assets/aker_fassi_scrub.jpeg', tag: 'Traditional' },
