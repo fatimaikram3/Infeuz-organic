@@ -10,6 +10,7 @@ const Home = () => {
   const categories = [
     { name: 'Soaps', img: '/assets/daisy_lime_soap.png', color: 'var(--sage-green)' },
     { name: 'Soap Bases', img: '/assets/goatmilk_soap_base.jpeg', color: 'var(--soft-pink)' },
+    { name: 'Clays', img: '/assets/Moroccan ghassoul clay (rhassoul).jpeg', color: 'var(--beige)' },
     { name: 'Moisturizer', img: '/assets/moisturizer_150ml.png', color: 'var(--beige)' },
     { name: 'Serum', img: '/assets/serum_peel_v2.png', color: 'var(--sage-green)' },
     { name: 'Scrubs', img: '/assets/aker_fassi_scrub.jpeg', color: 'var(--soft-pink)' },

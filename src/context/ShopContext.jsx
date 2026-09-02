@@ -59,7 +59,22 @@ export const ShopProvider = ({ children }) => {
         { id: 406, name: 'Oval Soap Mould', category: 'Moulds', price: 500, img: '/assets/oval_soap_mould.jfif', tag: 'Classic' },
         { id: 407, name: 'Message Bar Soap Mould', category: 'Moulds', price: 700, img: '/assets/message_bar_soap_mould.png', tag: 'Artistic' },
         { id: 408, name: 'Heart Shape Soap Mould', category: 'Moulds', price: 550, img: '/assets/heart_shape_soap_mould.jfif', tag: 'Love' },
-        { id: 409, name: 'Strawberry Soap Mould', category: 'Moulds', price: 650, img: '/assets/strawberry_soap_mould.jpg', tag: 'Fruity' },
+        // Clays
+        { id: 501, name: 'Moroccan Ghassoul (Rhassoul Clay) 25g', category: 'Clays', price: 300, img: '/assets/Moroccan ghassoul clay (rhassoul).jpeg', tag: 'Pure' },
+        { id: 502, name: 'Moroccan Ghassoul (Rhassoul Clay) 50g', category: 'Clays', price: 500, img: '/assets/Moroccan ghassoul clay (rhassoul).jpeg', tag: 'Value Pack' },
+        { id: 503, name: 'Bentonite Clay 50g', category: 'Clays', price: 150, img: '/assets/Bentonite clay.png', tag: 'Detox' },
+        { id: 504, name: 'Bentonite Clay 100g', category: 'Clays', price: 275, img: '/assets/Bentonite clay.png', tag: 'Value Pack' },
+        { id: 505, name: 'Indian Red Clay 50g', category: 'Clays', price: 350, img: '/assets/Indian red clay.jpeg', tag: 'Rich' },
+        { id: 506, name: 'Kaolin Clay / White Clay 50g', category: 'Clays', price: 300, img: '/assets/Kaolin clay.png', tag: 'Gentle' },
+        { id: 507, name: 'Kaolin Clay / White Clay 100g', category: 'Clays', price: 500, img: '/assets/Kaolin clay.png', tag: 'Value Pack' },
+        { id: 508, name: 'French Pink Clay 50g', category: 'Clays', price: 350, img: '/assets/French pink clay.png', tag: 'Rose Glow' },
+        { id: 509, name: 'French Pink Clay 100g', category: 'Clays', price: 500, img: '/assets/French pink clay.png', tag: 'Value Pack' },
+        { id: 510, name: 'French Green Clay 50g', category: 'Clays', price: 350, img: '/assets/French green clay.jpeg', tag: 'Purifying' },
+        { id: 511, name: 'Multani Mud 50g', category: 'Clays', price: 150, img: '/assets/multani mud .png', tag: 'Classic' },
+        { id: 512, name: 'Multani Mud 100g', category: 'Clays', price: 250, img: '/assets/multani mud .png', tag: 'Value Pack' },
+        { id: 513, name: 'Clay & Sidr 4-Pack Bundle (Green 50g, Red 50g, Ghassoul 25g, Sidr 25g)', category: 'Clays', price: 1200, img: '/assets/Bundle clays(french green clay ,indian red clay ,moroccan ghassoul,sidr powder).jpeg', tag: 'Special Bundle' },
+        { id: 514, name: 'Duo Clay Bundle (French Green 50g & Indian Red 50g)', category: 'Clays', price: 600, img: '/assets/Bundle(french green clay and indian red clay).png', tag: 'Best Combo' },
+        { id: 515, name: 'Quad Clay Bundle (Kaolin, Pink, Bentonite & Multani)', category: 'Clays', price: 1100, img: '/assets/bundle (kaolin clay,pink clay ,bentonite clay , multani mud).png', tag: 'Popular Bundle' },
     ];
 
     const [cart, setCart] = useState(() => {

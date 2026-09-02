@@ -11,7 +11,7 @@ const Shop = () => {
     wishlist, setIsFilterOpen, sortOrder, setSortOrder, priceRange 
   } = useShop();
 
-  const categories = ['All', 'Soaps', 'Soap Bases', 'Moisturizer', 'Serum', 'Scrubs', 'Oils', 'Powders', 'Moulds'];
+  const categories = ['All', 'Soaps', 'Soap Bases', 'Clays', 'Moisturizer', 'Serum', 'Scrubs', 'Oils', 'Powders', 'Moulds'];
 
   const minPrice = typeof priceRange[0] === 'number' ? priceRange[0] : 0;
   const maxPrice = (typeof priceRange[1] === 'number' && priceRange[1] > 0) ? priceRange[1] : 100000;
