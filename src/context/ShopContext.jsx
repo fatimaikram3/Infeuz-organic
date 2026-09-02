@@ -60,18 +60,18 @@ export const ShopProvider = ({ children }) => {
         { id: 407, name: 'Message Bar Soap Mould', category: 'Moulds', price: 700, img: '/assets/message_bar_soap_mould.png', tag: 'Artistic' },
         { id: 408, name: 'Heart Shape Soap Mould', category: 'Moulds', price: 550, img: '/assets/heart_shape_soap_mould.jfif', tag: 'Love' },
         // Clays
-        { id: 501, name: 'Moroccan Ghassoul (Rhassoul Clay) 25g', category: 'Clays', price: 300, img: '/assets/Moroccan ghassoul clay (rhassoul).jpeg', tag: 'Pure' },
-        { id: 502, name: 'Moroccan Ghassoul (Rhassoul Clay) 50g', category: 'Clays', price: 500, img: '/assets/Moroccan ghassoul clay (rhassoul).jpeg', tag: 'Value Pack' },
-        { id: 503, name: 'Bentonite Clay 50g', category: 'Clays', price: 150, img: '/assets/Bentonite clay.png', tag: 'Detox' },
-        { id: 504, name: 'Bentonite Clay 100g', category: 'Clays', price: 275, img: '/assets/Bentonite clay.png', tag: 'Value Pack' },
+        { id: 501, name: 'Moroccan Ghassoul (Rhassoul Clay) 25g', category: 'Clays', price: 300, img: '/assets/Moroccan ghassoul clay (rhassoul).jpeg', tag: 'Pure', variants: [{ weight: '25g', price: 300, id: 501 }, { weight: '50g', price: 500, id: 502 }] },
+        { id: 502, name: 'Moroccan Ghassoul (Rhassoul Clay) 50g', category: 'Clays', price: 500, img: '/assets/Moroccan ghassoul clay (rhassoul).jpeg', tag: 'Value Pack', variants: [{ weight: '25g', price: 300, id: 501 }, { weight: '50g', price: 500, id: 502 }] },
+        { id: 503, name: 'Bentonite Clay 50g', category: 'Clays', price: 150, img: '/assets/Bentonite clay.png', tag: 'Detox', variants: [{ weight: '50g', price: 150, id: 503 }, { weight: '100g', price: 275, id: 504 }] },
+        { id: 504, name: 'Bentonite Clay 100g', category: 'Clays', price: 275, img: '/assets/Bentonite clay.png', tag: 'Value Pack', variants: [{ weight: '50g', price: 150, id: 503 }, { weight: '100g', price: 275, id: 504 }] },
         { id: 505, name: 'Indian Red Clay 50g', category: 'Clays', price: 350, img: '/assets/Indian red clay.jpeg', tag: 'Rich' },
-        { id: 506, name: 'Kaolin Clay / White Clay 50g', category: 'Clays', price: 300, img: '/assets/Kaolin clay.png', tag: 'Gentle' },
-        { id: 507, name: 'Kaolin Clay / White Clay 100g', category: 'Clays', price: 500, img: '/assets/Kaolin clay.png', tag: 'Value Pack' },
-        { id: 508, name: 'French Pink Clay 50g', category: 'Clays', price: 350, img: '/assets/French pink clay.png', tag: 'Rose Glow' },
-        { id: 509, name: 'French Pink Clay 100g', category: 'Clays', price: 500, img: '/assets/French pink clay.png', tag: 'Value Pack' },
+        { id: 506, name: 'Kaolin Clay / White Clay 50g', category: 'Clays', price: 300, img: '/assets/Kaolin clay.png', tag: 'Gentle', variants: [{ weight: '50g', price: 300, id: 506 }, { weight: '100g', price: 500, id: 507 }] },
+        { id: 507, name: 'Kaolin Clay / White Clay 100g', category: 'Clays', price: 500, img: '/assets/Kaolin clay.png', tag: 'Value Pack', variants: [{ weight: '50g', price: 300, id: 506 }, { weight: '100g', price: 500, id: 507 }] },
+        { id: 508, name: 'French Pink Clay 50g', category: 'Clays', price: 350, img: '/assets/French pink clay.png', tag: 'Rose Glow', variants: [{ weight: '50g', price: 350, id: 508 }, { weight: '100g', price: 500, id: 509 }] },
+        { id: 509, name: 'French Pink Clay 100g', category: 'Clays', price: 500, img: '/assets/French pink clay.png', tag: 'Value Pack', variants: [{ weight: '50g', price: 350, id: 508 }, { weight: '100g', price: 500, id: 509 }] },
         { id: 510, name: 'French Green Clay 50g', category: 'Clays', price: 350, img: '/assets/French green clay.jpeg', tag: 'Purifying' },
-        { id: 511, name: 'Multani Mud 50g', category: 'Clays', price: 150, img: '/assets/multani mud .png', tag: 'Classic' },
-        { id: 512, name: 'Multani Mud 100g', category: 'Clays', price: 250, img: '/assets/multani mud .png', tag: 'Value Pack' },
+        { id: 511, name: 'Multani Mud 50g', category: 'Clays', price: 150, img: '/assets/multani mud .png', tag: 'Classic', variants: [{ weight: '50g', price: 150, id: 511 }, { weight: '100g', price: 250, id: 512 }] },
+        { id: 512, name: 'Multani Mud 100g', category: 'Clays', price: 250, img: '/assets/multani mud .png', tag: 'Value Pack', variants: [{ weight: '50g', price: 150, id: 511 }, { weight: '100g', price: 250, id: 512 }] },
         { id: 513, name: 'Clay & Sidr 4-Pack Bundle (Green 50g, Red 50g, Ghassoul 25g, Sidr 25g)', category: 'Clays', price: 1200, img: '/assets/Bundle clays(french green clay ,indian red clay ,moroccan ghassoul,sidr powder).jpeg', tag: 'Special Bundle' },
         { id: 514, name: 'Duo Clay Bundle (French Green 50g & Indian Red 50g)', category: 'Clays', price: 600, img: '/assets/Bundle(french green clay and indian red clay).png', tag: 'Best Combo' },
         { id: 515, name: 'Quad Clay Bundle (Kaolin, Pink, Bentonite & Multani)', category: 'Clays', price: 1100, img: '/assets/bundle (kaolin clay,pink clay ,bentonite clay , multani mud).png', tag: 'Popular Bundle' },
@@ -448,6 +448,30 @@ export const ShopProvider = ({ children }) => {
                                 <span>{activeQuickView.category}</span>
                                 <h2 className="luxury-font">{activeQuickView.name}</h2>
                                 <div className="qv-price">Rs. {activeQuickView.price}.00</div>
+                                {activeQuickView.variants && activeQuickView.variants.length > 0 && (
+                                    <div className="mt-4 mb-2">
+                                        <span className="block text-xs uppercase tracking-wider font-semibold muted-text mb-1.5" style={{ fontSize: '0.72rem', color: 'var(--muted-text)' }}>SELECT WEIGHT OPTION:</span>
+                                        <div className="flex flex-wrap gap-2">
+                                            {activeQuickView.variants.map(v => (
+                                                <button
+                                                    key={v.id}
+                                                    onClick={() => {
+                                                        const targetProd = products.find(p => p.id === v.id);
+                                                        if (targetProd) setActiveQuickView(targetProd);
+                                                    }}
+                                                    className="px-3 py-1 text-xs font-semibold rounded-full border transition-all"
+                                                    style={{
+                                                        backgroundColor: v.id === activeQuickView.id ? 'var(--dark-text)' : 'var(--surface)',
+                                                        color: v.id === activeQuickView.id ? 'var(--button-text)' : 'var(--dark-text)',
+                                                        borderColor: v.id === activeQuickView.id ? 'var(--dark-text)' : 'var(--glass-border)'
+                                                    }}
+                                                >
+                                                    {v.weight} — Rs. {v.price}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
                                 <div className="flex gap-4 mt-6">
                                     <button className="btn-primary flex-grow" onClick={() => { addToCart(activeQuickView); setActiveQuickView(null); }}>Add to Bag</button>
                                 </div>

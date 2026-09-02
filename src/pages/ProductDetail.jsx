@@ -70,6 +70,23 @@ const ProductDetail = () => {
           <h1 className="luxury-font text-4xl">{product.name}</h1>
           <span className="pd-price">Rs. {product.price}.00</span>
 
+          {product.variants && product.variants.length > 0 && (
+            <div className="pd-variants mt-5 mb-4">
+              <span className="block text-xs uppercase tracking-wider font-semibold muted-text mb-2">Select Weight Option:</span>
+              <div className="flex flex-wrap gap-2.5">
+                {product.variants.map((v) => (
+                  <button
+                    key={v.id}
+                    onClick={() => navigate(`/product/${v.id}`)}
+                    className={`px-4 py-2 text-xs font-semibold rounded-full border transition-all ${v.id === product.id ? 'bg-dark-text text-white border-dark-text shadow-sm' : 'bg-surface text-dark-text border-glass-border hover:border-dark-text'}`}
+                  >
+                    {v.weight} — Rs. {v.price}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           <p className="pd-desc">
             {details.shortDesc}
           </p>
