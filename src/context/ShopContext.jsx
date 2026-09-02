@@ -35,15 +35,25 @@ export const ShopProvider = ({ children }) => {
         { id: 9, name: 'Aker Fassi Scrub', category: 'Scrubs', price: 1250, img: '/assets/aker_fassi_scrub.jpeg', tag: 'Traditional' },
         { id: 303, name: 'Nila Moroccan Scrub', category: 'Scrubs', price: 1850, img: '/assets/nila_moroccan_scrub_v2.jpeg', tag: 'Luxury' },
 
-        // Oils
-        { id: 11, name: 'Peppermint Essential Oil', category: 'Oils', price: 850, img: '/assets/oil_peppermint.jpeg', tag: 'Pure' },
-        { id: 12, name: 'Tea Tree Essential Oil', category: 'Oils', price: 950, img: '/assets/oil_teatree.jpeg', tag: 'Cleansing' },
-        { id: 111, name: 'Lavender Essential Oil', category: 'Oils', price: 850, img: '/assets/oil_lavender.jpeg', tag: 'Soothing' },
-        { id: 112, name: 'Eucalyptus Essential Oil', category: 'Oils', price: 900, img: '/assets/oil_eucalyptus.jpeg', tag: 'Refreshing' },
-        { id: 115, name: 'Rose Fragrance Oil', category: 'Oils', price: 1200, img: '/assets/oil_rose.png', tag: 'Floral' },
-        { id: 116, name: 'Strawberry Fragrance Oil', category: 'Oils', price: 1100, img: '/assets/oil_strawberry.png', tag: 'Sweet' },
-        { id: 117, name: 'Jasmine Fragrance Oil', category: 'Oils', price: 1250, img: '/assets/oil_jasmine.png', tag: 'Exotic' },
+        // Oils & Fragrances
+        { id: 11, name: 'Peppermint Essential Oil (20ml)', category: 'Oils', price: 400, img: '/assets/oil_peppermint.jpeg', tag: 'Pure' },
+        { id: 12, name: 'Tea Tree Essential Oil (20ml)', category: 'Oils', price: 375, img: '/assets/oil_teatree.jpeg', tag: 'Cleansing' },
+        { id: 111, name: 'Lavender Fragrance Oil (20ml)', category: 'Oils', price: 350, img: '/assets/oil_lavender.jpeg', tag: 'Soothing' },
+        { id: 112, name: 'Eucalyptus Essential Oil (20ml)', category: 'Oils', price: 350, img: '/assets/oil_eucalyptus.jpeg', tag: 'Refreshing' },
+        { id: 115, name: 'Rose Fragrance Oil (15ml)', category: 'Oils', price: 350, img: '/assets/oil_rose.png', tag: 'Floral' },
+        { id: 116, name: 'Strawberry Fragrance Oil (20ml)', category: 'Oils', price: 400, img: '/assets/oil_strawberry.png', tag: 'Sweet' },
+        { id: 117, name: 'Jasmine Fragrance Oil (15ml)', category: 'Oils', price: 400, img: '/assets/oil_jasmine.png', tag: 'Exotic' },
         { id: 118, name: 'Vitamin E Oil', category: 'Oils', price: 1500, img: '/assets/oil_vitamin_e.png', tag: 'Nourishing' },
+        { id: 601, name: 'Argan Oil (30ml)', category: 'Oils', price: 600, img: '/assets/argon oil.png', tag: 'Pure' },
+        { id: 602, name: 'Mulberry Extract (30ml)', category: 'Oils', price: 450, img: '/assets/mulberry extract.png', tag: 'Extract' },
+        { id: 603, name: 'Promise Fragrance (15ml)', category: 'Oils', price: 650, img: '/assets/blossom fragrance oil.png', tag: 'Luxury' },
+        { id: 604, name: 'Gentlemen Fragrance Oil (15ml)', category: 'Oils', price: 400, img: '/assets/gentlemen fragrance oil.png', tag: 'Classic' },
+        { id: 605, name: 'Vanilla Fragrance Oil (15ml)', category: 'Oils', price: 400, img: '/assets/vanilla fragrance oil.png', tag: 'Sweet' },
+        { id: 606, name: 'Blossom Fragrance Oil (15ml)', category: 'Oils', price: 350, img: '/assets/blossom fragrance oil.png', tag: 'Floral' },
+        { id: 607, name: 'Apricot Fragrance (15ml)', category: 'Oils', price: 350, img: '/assets/oil_strawberry.png', tag: 'Fruity' },
+        { id: 608, name: 'Coffee Fragrance Oil (15ml)', category: 'Oils', price: 350, img: '/assets/Coffee fragrance oil.png', tag: 'Rich' },
+        { id: 609, name: 'Motia Fragrance Oil (15ml)', category: 'Oils', price: 300, img: '/assets/oil_jasmine.png', tag: 'Exotic' },
+        { id: 610, name: 'Rebel Oak Fragrance Oil (15ml)', category: 'Oils', price: 400, img: '/assets/gentlemen fragrance oil.png', tag: 'Woody' },
 
         // Powders
         { id: 201, name: 'Akarfassi Powder', category: 'Powders', price: 1200, img: '/assets/powder_akarfassi.png', tag: 'Traditional' },
