@@ -4,7 +4,7 @@ import { useShop } from '../context/ShopContext';
 import { ShieldCheck, Truck, CreditCard } from 'lucide-react';
 
 const Checkout = () => {
-    const { cart, cartTotal, setIsCartOpen, showToast } = useShop();
+    const { cart, cartTotal, shippingFee, grandTotal, setIsCartOpen, showToast } = useShop();
     const [formData, setFormData] = useState({
         email: '',
         firstName: '',
@@ -185,15 +185,15 @@ const Checkout = () => {
                     <div className="summary-totals border-t pt-6">
                         <div className="flex justify-between mb-2">
                             <span className="color-muted">Subtotal</span>
-                            <span>Rs. {cartTotal}.00</span>
+                            <span>Rs. {cartTotal.toLocaleString()}.00</span>
                         </div>
                         <div className="flex justify-between mb-4">
-                            <span className="color-muted">Shipping</span>
-                            <span className="text-green-600">FREE</span>
+                            <span className="color-muted">Shipping Fee</span>
+                            <span className="font-semibold" style={{ color: 'var(--dark-text)' }}>Rs. {shippingFee}.00</span>
                         </div>
                         <div className="flex justify-between text-lg font-bold border-t pt-4">
                             <span>Total</span>
-                            <span>Rs. {cartTotal}.00</span>
+                            <span className="text-xl" style={{ color: 'var(--dark-text)' }}>Rs. {grandTotal.toLocaleString()}.00</span>
                         </div>
                     </div>
 

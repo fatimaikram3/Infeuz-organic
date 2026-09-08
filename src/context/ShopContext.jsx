@@ -189,8 +189,10 @@ export const ShopProvider = ({ children }) => {
         }, 3000);
     };
 
-    const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
-    const cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    const shippingFee = 250;
+    const cartCount = cart.reduce((total, item) => total + (Number(item.quantity) || 1), 0);
+    const cartTotal = cart.reduce((total, item) => total + (Number(item.price) * (Number(item.quantity) || 1)), 0);
+    const grandTotal = cart.length > 0 ? cartTotal + shippingFee : 0;
 
     const value = {
         products,
@@ -202,6 +204,8 @@ export const ShopProvider = ({ children }) => {
         toggleWishlist,
         cartCount,
         cartTotal,
+        shippingFee,
+        grandTotal,
         activeQuickView,
         setActiveQuickView,
         isCartOpen,
@@ -274,9 +278,17 @@ export const ShopProvider = ({ children }) => {
 
                         {cart.length > 0 && (
                             <div className="drawer-footer">
-                                <div className="total-row">
+                                <div className="total-row" style={{ fontSize: '0.85rem', color: 'var(--muted-text)', marginBottom: '6px' }}>
                                     <span>Subtotal</span>
-                                    <span>Rs. {cartTotal}.00</span>
+                                    <span>Rs. {cartTotal.toLocaleString()}.00</span>
+                                </div>
+                                <div className="total-row" style={{ fontSize: '0.85rem', color: 'var(--muted-text)', marginBottom: '12px' }}>
+                                    <span>Shipping Fee</span>
+                                    <span>Rs. {shippingFee}.00</span>
+                                </div>
+                                <div className="total-row" style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--dark-text)', marginBottom: '16px', borderTop: '1px solid var(--glass-border)', paddingTop: '10px' }}>
+                                    <span>Total</span>
+                                    <span>Rs. {grandTotal.toLocaleString()}.00</span>
                                 </div>
                                 <button
                                     className="btn-primary w-full"
@@ -285,7 +297,7 @@ export const ShopProvider = ({ children }) => {
                                         window.location.href = '/checkout';
                                     }}
                                 >
-                                    Checkout
+                                    Proceed to Checkout
                                 </button>
                             </div>
                         )}
