@@ -384,11 +384,15 @@ const Shop = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 0.5s ease;
+          image-rendering: -webkit-optimize-contrast;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          transform: translateZ(0);
+          transition: transform 0.4s ease;
         }
 
         .product-card:hover .product-img-wrapper img {
-          transform: scale(1.04);
+          transform: scale(1.03) translateZ(0);
         }
 
         .product-tag {

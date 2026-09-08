@@ -103,6 +103,14 @@ html, body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+/* Sharp Image Rendering & Anti-Blur Optimization */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 *,
 *::before,
 *::after {

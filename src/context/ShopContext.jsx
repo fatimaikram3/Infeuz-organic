@@ -606,8 +606,8 @@ export const ShopProvider = ({ children }) => {
         .close-qv { position: absolute; top: 15px; right: 15px; font-size: 2rem; color: var(--dark-text); z-index: 10; }
         .qv-grid { display: grid; grid-template-columns: 1fr 1fr; }
         @media (max-width: 600px) { .qv-grid { grid-template-columns: 1fr; } }
-        .qv-img { background: var(--beige); aspect-ratio: 1/1; }
-        .qv-img img { width: 100%; height: 100%; object-fit: cover; }
+        .qv-img { background: var(--surface); aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; padding: 15px; border-right: 1px solid var(--glass-border); }
+        .qv-img img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; image-rendering: -webkit-optimize-contrast; backface-visibility: hidden; }
         .qv-info { padding: 40px; }
         .qv-info span { font-size: 0.8rem; text-transform: uppercase; color: var(--muted-text); }
         .qv-info h2 { font-size: 2rem; margin: 10px 0; }

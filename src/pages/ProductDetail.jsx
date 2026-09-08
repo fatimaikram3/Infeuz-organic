@@ -181,15 +181,24 @@ const ProductDetail = () => {
 
         .main-img {
           aspect-ratio: 1/1;
-          background-color: var(--beige);
-          border-radius: 8px;
+          background-color: var(--surface);
+          border-radius: 12px;
           overflow: hidden;
           margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid var(--glass-border);
+          padding: 10px;
         }
         .main-img img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          object-fit: contain;
+          image-rendering: -webkit-optimize-contrast;
+          backface-visibility: hidden;
         }
         .thumb-grid {
           display: flex;
