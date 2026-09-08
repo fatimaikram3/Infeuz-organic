@@ -269,17 +269,26 @@ const Checkout = () => {
           align-items: center;
         }
         .summary-img {
-          width: 70px;
+          width: 75px;
           height: 85px;
           flex-shrink: 0;
-          background: var(--beige);
-          border-radius: 4px;
+          background: var(--surface);
+          border: 1px solid var(--glass-border);
+          border-radius: 8px;
           overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 4px;
         }
         .summary-img img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          object-fit: contain;
+          image-rendering: -webkit-optimize-contrast;
+          backface-visibility: hidden;
         }
         .flex { display: flex; }
         .flex-col { flex-direction: column; }

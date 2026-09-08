@@ -519,8 +519,28 @@ export const ShopProvider = ({ children }) => {
         .empty-state { text-align: center; padding: 50px 0; color: var(--muted-text); }
         
         .item-row { display: flex; gap: 15px; padding: 15px 0; border-bottom: 1px solid #eee; position: relative; }
-        .item-img { width: 70px; height: 90px; background: var(--beige); border-radius: 4px; overflow: hidden; }
-        .item-img img { width: 100%; height: 100%; object-fit: cover; }
+        .item-img { 
+          width: 75px; 
+          height: 85px; 
+          background: var(--surface); 
+          border: 1px solid var(--glass-border);
+          border-radius: 8px; 
+          overflow: hidden; 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 4px;
+          flex-shrink: 0;
+        }
+        .item-img img { 
+          max-width: 100%; 
+          max-height: 100%; 
+          width: auto; 
+          height: auto; 
+          object-fit: contain; 
+          image-rendering: -webkit-optimize-contrast;
+          backface-visibility: hidden;
+        }
         .item-details h4 { font-size: 0.95rem; margin-bottom: 5px; }
         .item-details p { font-size: 0.85rem; color: var(--muted-text); }
         .qty-picker { display: flex; align-items: center; border: 1px solid #eee; width: fit-content; margin-top: 10px; }
@@ -593,8 +613,28 @@ export const ShopProvider = ({ children }) => {
         .search-result-item:hover {
           background: #fbfbfb;
         }
-        .res-img { width: 50px; height: 60px; background: var(--beige); border-radius: 4px; overflow: hidden; }
-        .res-img img { width: 100%; height: 100%; object-fit: cover; }
+        .res-img { 
+          width: 55px; 
+          height: 65px; 
+          background: var(--surface); 
+          border: 1px solid var(--glass-border);
+          border-radius: 8px; 
+          overflow: hidden; 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 3px;
+          flex-shrink: 0;
+        }
+        .res-img img { 
+          max-width: 100%; 
+          max-height: 100%; 
+          width: auto; 
+          height: auto; 
+          object-fit: contain; 
+          image-rendering: -webkit-optimize-contrast;
+          backface-visibility: hidden;
+        }
         .res-info { display: flex; flex-direction: column; justify-content: center; }
         .res-cat { font-size: 0.7rem; text-transform: uppercase; color: var(--muted-text); }
         .res-name { font-size: 0.9rem; font-weight: 500; font-family: 'Playfair Display', serif; }
